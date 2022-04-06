@@ -1,15 +1,65 @@
 import { HomeIcon, LibraryIcon, SearchIcon, PlusCircleIcon, HeartIcon, RssIcon } from '@heroicons/react/outline';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import useSpotify from '../hooks/useSpotify'
 import { useEffect, useState } from 'react';
 import { playlistIdState } from '../atoms/playlistAtom';
 import {useRecoilState} from "recoil";
 
+const pl1={
+    "collaborative": true,
+    "description": "string",
+    "external_urls": {
+      "spotify": "string"
+    },
+    "followers": {
+      "href": "string",
+      "total": 0
+    },
+    "href": "string",
+    "id": "string",
+    "images": [
+      {
+        "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228\n",
+        "height": 300,
+        "width": 300
+      }
+    ],
+    "name": "string",
+    "owner": {
+      "external_urls": {
+        "spotify": "string"
+      },
+      "followers": {
+        "href": "string",
+        "total": 0
+      },
+      "href": "string",
+      "id": "string",
+      "type": "user",
+      "uri": "string",
+      "display_name": "string"
+    },
+    "public": true,
+    "snapshot_id": "string",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/me/shows?offset=0&limit=20\n",
+      "items": [
+        {}
+      ],
+      "limit": 20,
+      "next": "https://api.spotify.com/v1/me/shows?offset=1&limit=1",
+      "offset": 0,
+      "previous": "https://api.spotify.com/v1/me/shows?offset=1&limit=1",
+      "total": 4
+    },
+    "type": "string",
+    "uri": "string"
+  }
 
 function Sidebar() {
     const spotifyAPI = useSpotify();
     const { data: session, status } = useSession();
-    const [playlists, setPlaylists] = useState([]);
+    const [playlists, setPlaylists] = useState([pl1]);
     const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
     
     useEffect(() => {
@@ -21,15 +71,11 @@ function Sidebar() {
         }
     }, [session, spotifyAPI]);
 
-    console.log(playlists);
+    // console.log(playlistId);
 
     return (
-        <div className="text-gray-500 p-5 text-sm border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide">
+        <div className="text-gray-500 p-5 text-xs lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] border-r border-gray-900 overflow-y-scroll h-screen scrollbar-hide hidden md:inline-flex pb-36">
             <div className="space-y-4">
-                <button className="flex items-center space-x-2
-            hover:text-white" onClick={() => signOut()}>
-                    <p>Logout</p>
-                </button>
 
                 <button className="flex items-center space-x-2
             hover:text-white">
@@ -67,7 +113,7 @@ function Sidebar() {
                 <hr className="border-t-[0.1px] border-gray-900" />
 
                 {playlists.map((playlist) => (
-                    <p key={playlist.id} onClick={()=>setPlaylistId(playlist.id)} className="cursor-pointer hover:text-white">New playlis</p>
+                    <p key={playlist.id} onClick={()=>setPlaylistId(playlist.id)} className="cursor-pointer hover:text-white">{playlist.name}</p>
                 ))}
 
             </div>
