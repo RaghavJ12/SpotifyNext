@@ -1,25 +1,11 @@
-# Next.js + Tailwind CSS Example
+![spotifynext6](https://user-images.githubusercontent.com/50922572/162802538-f488c972-5593-4076-9515-06944abcf6a5.jpg)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![spotifynext1](https://user-images.githubusercontent.com/50922572/162802455-03c96118-b85b-4e56-9f08-6ffa8986ec1f.jpg)
 
-## Deploy your own
+![spotifynext2](https://user-images.githubusercontent.com/50922572/162802504-cdb9f992-0f3c-4f0e-9586-83beb6c6dc9d.jpg)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![spotifynext3](https://user-images.githubusercontent.com/50922572/162802616-04677a03-8a13-4eba-85bb-bad29a5253ba.jpg)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+![spotifynext4](https://user-images.githubusercontent.com/50922572/162802662-f26d775a-5d63-4c9e-afde-56bfbf0ac317.jpg)
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-https://spotifynext-psi.vercel.app/
+![spotifynext5](https://user-images.githubusercontent.com/50922572/162802696-c99e807c-c77d-4a3b-8d91-bbdab737bc73.jpg)
