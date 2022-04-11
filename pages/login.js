@@ -1,10 +1,12 @@
 import React from 'react'
 import { getProviders, signIn } from 'next-auth/react'
+import Image from 'next/image'
 
 export default function Login({ providers }) {
+  console.log(providers)
   return (
     <div className="flex flex-col items-center min-h-screen w-full justify-center bg-black">
-      <img src="./images/logo1.png" className="w-52 mb-5" alt="" /> 
+      <Image src="/images/logo1.png" width={50} height={50} className="mb-5" alt="" /> 
       {Object.values(providers).map(provider => (
         <div key={provider.name}>
           <button className="bg-[#18D860] text-white p-5 rounded-full"
